@@ -1,0 +1,42 @@
+#output-info{
+    height: 73vh;
+    width: 32vw;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
+
+#top-output{
+    margin-top: 1vh;
+}
+
+.title{
+    font-size: 1vw;
+}
+  
+.output{
+    font-size: 1.25vw;
+    color: white;
+}
+
+.tip{
+    background-color: #212223;
+    color: white;
+    border: 0;
+    font-size: small;
+    border-radius: 50%;
+    margin-top: -10px;
+  }
+
+  a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+  }
+
+  .eligibility{
+    margin-left: 2vh;
+  }

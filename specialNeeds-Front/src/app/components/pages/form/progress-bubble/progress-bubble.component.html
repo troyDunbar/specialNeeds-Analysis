@@ -1,0 +1,4 @@
+<div class="text-center">
+    <button class="step-bubble" [ngClass]="id > page ? 'inactive' : (id == page ? 'selected' : 'completed')" (click)="changePage()"></button><br>
+    <p class="step-title">{{title}}</p>
+</div>

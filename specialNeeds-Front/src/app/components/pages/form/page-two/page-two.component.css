@@ -1,0 +1,24 @@
+.form-wrapper{
+    height: 56vh;
+    width: 29vw;
+    color: var(--text-dark);
+    margin: 1vh 0 1vh 0;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+
+.directions{
+    margin: 2vh 0 1vh 0;
+}
+
+.form-format{
+    margin-top: 5vh;
+}
+
+#row-one{
+    margin: 3vh 0 5vh;
+}
+
+#row-two{
+    margin: 5vh 0 5vh;
+}

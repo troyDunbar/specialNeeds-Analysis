@@ -1,0 +1,91 @@
+.wrapper{
+    height: 88vh;
+    max-width: 100vw;
+}
+
+.bubble{
+    border-radius: 15px;
+    color: white;
+    background-color: var(--background-dark);
+}
+
+.login{
+    height: 50vh;
+    width: 25vw;
+}
+
+.signup{
+    height: 70vh;
+    width: 25vw;
+}
+
+#header{
+    margin-top: 4vh;
+    font-size: 40px;
+}
+
+.username{
+    margin-top: 4vh;
+}
+
+.password{
+    margin-top: 4vh;
+}
+
+.input-box{
+    width: 20vw;
+    height: 4vh;
+    border: none;
+    border-radius: 15px;
+    margin-top: 0.5vh;
+}
+
+.login-name{
+    width: 9vw;
+}
+
+.name-wrapper{
+    margin: 0 1vw 0 1vw;
+}
+
+.button-wrapper{
+    margin-top: 5vh;
+}
+
+.button{
+    color: white;
+}
+
+#cancel{
+    border: 1px solid white;
+    transition: 0.3s;
+} #cancel:hover{
+    cursor: pointer !important;
+    background-color: #ffffff15;
+}
+
+#submit{
+    margin-left: 1vw;
+    border: 1px solid var(--text-dark);
+    background-color: var(--text-dark);
+    transition: 0.3s;
+} #submit:hover{
+    cursor: pointer !important;
+    background-color: var(--background-dark);
+}
+
+#prompt{
+    margin-top: 7vh;
+}
+
+span a:hover{
+    cursor: pointer;
+}
+
+#icon{
+    margin-right: 0.25vw;
+}
+
+input[type='text'], input[type="password"]{
+    padding: 10px;
+}

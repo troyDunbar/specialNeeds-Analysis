@@ -1,0 +1,29 @@
+.form-wrapper{
+    height: 56vh;
+    width: 29vw;
+    color:  var(--text-dark);
+    margin: 1vh 0 1vh 0;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+
+.title{
+    width: 90%;
+    font-size: large;
+    border-bottom: 1px solid  var(--text-light);
+    margin: 2vh 0 2vh 0;
+    line-height: 0.1em !important;
+}
+
+.title span{
+    background:  var(--background-light);
+    padding: 0 7px 0 7px;
+}
+
+.paragraph{
+    margin: 1vh 0.5vh 2vh 0.5vh;
+}
+
+.info-text{
+    color: var(--text-light);
+}

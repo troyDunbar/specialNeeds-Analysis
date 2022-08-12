@@ -1,0 +1,25 @@
+.step-bubble{
+    height: 50px;
+    width: 50px;
+    margin-top: 2vh;
+    border-radius: 50%;
+    border: 2px solid var(--text-dark);
+    background-color: var(--text-dark);
+    color: white;
+}
+
+.step-title{
+    color: var(--text-light);
+    margin: 0.5vh 0 0 0;
+}
+
+.completed{
+    background-color: var(--text-dark);
+}
+.selected{
+    background-color: var(--text-dark50);
+}
+
+.inactive{
+    background-color: transparent;
+}

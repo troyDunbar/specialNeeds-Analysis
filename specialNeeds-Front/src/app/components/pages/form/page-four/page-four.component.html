@@ -1,0 +1,85 @@
+<!-- paragraph -->
+
+<!-- radio button if they meet paragraph req -->
+<!-- if yes, how much income would you be willing to contribute to this acct monthly -->
+<!-- enter growth rate of funds -->
+<!-- enter max allowed in ABLE acct in your state -->
+
+<div class="d-flex flex-column align-items-center form-wrapper fadeIn">
+  <!-- FIRST FORM -->
+  <h3 class="title text-center">
+    <span class="form-header">ABLE Account</span>
+  </h3>
+  <span class="paragraph text-center info-text">
+    An ABLE Account is an investment/savings account for a person with special
+    needs where funds can be deposited by the dependent's family members and
+    invested into stocks and bonds. Any gains on the account is free of tax and
+    can be taken out for use without tax payment as long as the funds are being
+    used for the special needs purposes. The account requires minimal to no
+    amount to get set up. To be eligible to sign up for an ABLE account for the
+    dependent, the dependent must have declared a disability before the age of
+    26.
+  </span>
+  <span>Does the dependent meet this requirement?</span>
+  <app-radio
+    [name]="'able-requirement'"
+    (radioEvent)="radioEventIsAble($event)"
+  ></app-radio>
+  <app-input
+    class="inputs"
+    *ngIf="isAble == true"
+    [type]="'number'"
+    [title]="'Annual Contribution to ABLE account'"
+    [title_id]="'able-contribution'"
+    [model]="data.addBeneficiary.annualAbleContributions"
+    [(ngModel)]="data.addBeneficiary.annualAbleContributions"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    *ngIf="isAble == true"
+    [type]="'number'"
+    [title]="'Growth rate of current funds'"
+    [title_id]="'funds-growth'"
+    [model]="data.addBeneficiary.ABLEFundRate"
+    [(ngModel)]="data.addBeneficiary.ABLEFundRate"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    *ngIf="isAble == true"
+    [type]="'number'"
+    [title]="'Maximum allowed in ABLE account'"
+    [title_id]="'able-max'"
+    [model]="data.addBeneficiary.ABLEMaxHoldings"
+    [(ngModel)]="data.addBeneficiary.ABLEMaxHoldings"
+    ngDefaultControl
+  ></app-input>
+  <!-- SECOND FORM -->
+  <h3 class="title text-center">
+    <span class="form-header">Special Needs Trust</span>
+  </h3>
+  <span class="paragraph text-center info-text"
+    >A special needs trust serves the purpose of providing financial assistance
+    for special needs dependent that are not covered by the government programs
+    mentioned in the previous page. If eligible, the funds in a special needs
+    trust may not be used for basic needs like housing or food but instead for
+    medical expenses, caretaker costs, or transportation costs or other costs
+    not under needs. The advantage of this option is that the beneficiary will
+    not lose any government benefits while getting assistance through this. Some
+    requirements to be eligible include:</span
+  >
+  <ul class="list info-text">
+    <li>The beneficiary must be a disabled person under 65</li>
+    <li>
+      A guardian, grandparent or a court must be the creator of the account
+    </li>
+    <li>The beneficiary must also be a Medicaid beneficiary</li>
+  </ul>
+  <span>Does the dependent meet this requirement?</span>
+  <app-radio
+    [name]="'trust-requirement'"    
+    (radioEvent)="radioEventIsTrust($event)"
+  ></app-radio>
+  
+</div>

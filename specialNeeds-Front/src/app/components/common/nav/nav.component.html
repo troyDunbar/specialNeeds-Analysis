@@ -1,0 +1,25 @@
+<div
+  class="d-flex justify-content-between align-items-center shadow-sm wrapper"
+>
+  <div class="d-flex align-items-center title text-wrapper">
+    <i class="fa fa-solid fa-heartbeat fa-3x" id="icon"></i>
+    <h1 routerLink="/homepage">Special Needs Analysis</h1>
+  </div>
+  <div
+    class="dropdown-wrapper"
+    (mouseover)="isOpened = true"
+    (mouseleave)="isOpened = false"
+  >
+    <div class="d-flex align-items-center justify-content-start">
+      <div class="d-flex align-items-center text-wrapper">
+        <i class="fa fa-solid fa-user fa-2x" id="icon"></i>
+        <span id="username">{{ data.user.email }}</span>
+      </div>
+    </div>
+    <div class="dropdown-content rounded shadow text-center" *ngIf="isOpened">
+      <li class="drop-option" (click)="logOut()" routerLink="/homepage">Log Out</li>
+      <li class="drop-option" routerLink="/form">Add Beneficiary</li>
+      <li class="drop-option" routerLink="/homepage">Delete User</li>
+    </div>
+  </div>
+</div>

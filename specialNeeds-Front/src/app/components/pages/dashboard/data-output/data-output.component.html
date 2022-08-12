@@ -1,0 +1,58 @@
+<div id="output-info">
+    <div class="h-15 wrapper" id="top-output">
+        <div class="d-flex justify-content-center m-0">
+            <p class="title"><a href="https://www.ablenrc.org/get-started/how-do-i-enroll-in-a-program/">Max ABLE Contribution</a></p>
+        </div>   
+        <p class="output">{{data.outputArray[n].maxABLEContribution | currency:"USD":"symbol"}}</p>  
+    </div>
+    <div class="h-15 wrapper">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title">Recommended ABLE Contribution</p>            
+        </div>
+        <p class="output">{{data.outputArray[n].recommendedABLEContribution | currency:"USD":"symbol"}}</p>
+    </div>
+    <div class="h-15 wrapper">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title">Monthly Costs</p>
+        </div>
+        <p class="output">{{data.outputArray[n].costMonthly | currency:"USD":"symbol"}}</p>
+    </div>
+    <div class="h-15 wrapper">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title">Overall Monetary Cost</p>
+        </div>
+        <p class="output">{{data.outputArray[n].overallMonetaryCost | currency:"USD":"symbol"}}</p>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+    <div class="h-15 wrapper">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title"><a href="https://secure.ssa.gov/iClaim/dib">SSDI Eligibility</a></p>
+        </div>
+        <p class="output" style="color: green;" *ngIf="data.outputArray[n].socialSecurityDisabilityInsuranceEligible; else elseBlock">Eligible</p>
+        <ng-template #elseBlock>        
+            <p class="output" style="color: red;">Ineligible</p>
+        </ng-template>
+    </div>
+    <div class="h-15 wrapper eligibility">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title"><a href="https://www.ssa.gov/benefits/ssi/">SSI Eligibility</a></p>
+        </div>
+        <p class="output" style="color: green;" *ngIf="data.outputArray[n].supplementalSecurityIncomeEligible; else elseBlock">Eligible</p>
+        <ng-template #elseBlock>        
+            <p class="output" style="color: red;">Ineligible</p>
+        </ng-template>
+    </div>
+</div>
+
+    <div class="h-15 wrapper">
+        <div class="d-flex justify-content-center  m-0">
+            <p class="title"><a href="https://www.kiplinger.com/article/retirement/t021-c032-s014-how-much-should-go-into-your-special-needs-trust.html">Special Needs Trust Eligibility</a></p>
+        </div>
+        <p class="output" style="color: green;" *ngIf="data.outputArray[n].specialNeedsTrustEligible; else elseBlock">Eligible</p>
+        <ng-template #elseBlock>        
+            <p class="output" style="color: red;">Ineligible</p>
+        </ng-template>
+    </div>
+</div>

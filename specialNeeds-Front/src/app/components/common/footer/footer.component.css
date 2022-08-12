@@ -1,0 +1,30 @@
+.wrapper{
+    background-color: var(--background-dark);
+    height: 15vh;
+}
+
+h3{
+    color: var(--text-dark);
+}
+a, span{
+    text-decoration: none !important;
+    color: var(--text-light) !important;
+    transition: 0.3s;
+}
+
+span{
+    font-size: small;
+}
+
+.link{
+    margin-left: 3vw !important;
+}
+
+.credits{
+    padding: 6px;
+    border-radius: 10px;
+    transition: 0.3s;
+} .credits:hover{
+    background-color: #ffffff25;
+    cursor: pointer;
+}

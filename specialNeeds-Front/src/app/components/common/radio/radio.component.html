@@ -1,0 +1,10 @@
+<div class="d-flex justify-content-center radiobutton-wrapper">   
+   <div class="radio-wrapper">
+        <input class="radio" id="yes" name="{{name}}" type="radio" [value]="true" [(ngModel)]="model" (ngModelChange)="onChange()">
+        <label class="radio-label" for="yes">Yes</label>
+    </div>
+    <div class="radio-wrapper">
+        <input class="radio" id="no" name="{{name}}" type="radio" [value]="false" [(ngModel)]="model" (ngModelChange)="onChange()">
+        <label class="radio-label" for="no">No</label>
+    </div>
+</div>

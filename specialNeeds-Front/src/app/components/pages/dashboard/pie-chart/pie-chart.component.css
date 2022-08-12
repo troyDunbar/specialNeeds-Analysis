@@ -1,0 +1,6 @@
+.pie-chart-output{
+    background-color: var(--background-dark);
+
+    height: 36vh;
+    width: 53vw;
+}

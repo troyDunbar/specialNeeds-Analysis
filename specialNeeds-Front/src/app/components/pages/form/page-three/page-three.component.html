@@ -1,0 +1,42 @@
+<div class="d-flex flex-column align-items-center form-wrapper fadeIn">
+  <!-- FIRST FORM -->
+  <h3 class="title text-center">
+    <span class="form-header"
+      >SSDI (Social Security Disability Insurance):</span
+    >
+  </h3>
+  <p class="text-center info-text">
+    Social Security Disability Insurance (SSDI) is a government program built to
+    monetarily assist people with disabilities through monthly payments.
+  </p>
+  <div class="text-center">
+    <span
+      >Does the dependent have a medical condition that currently prevents them from
+      working?</span
+    >
+    <app-radio
+      [name]="'condition-job'"
+      (radioEvent)="radioEventIsDisabled($event)"
+    ></app-radio>
+  </div>
+  <!-- SECOND FORM -->
+  <h3 class="title text-center">
+    <span class="form-header">Suplemental Security Income Payments (SSI):</span>
+  </h3>
+  <p class="text-center info-text">
+    Social Security Disability Insurance (SSDI) is a government program built to
+    monetarily assist people with disabilities through monthly payments. Social
+    Security Income (SSI) is a government program that provides monetary
+    assistance to aged, blind and disabled people with low income to meet basic
+    needs for food, \ clothing and shelter.
+  </p>
+  <!-- TODO: first check age to see if its between 18-65 -->
+  <!-- TODO: check if monthly income is below $2000 and has <$2000 in assets -->
+  <span>Is the dependent totally or partially blind?</span>
+  <app-radio
+    [name]="'blind'"
+    [model]="this.data.conditionStatus.isLegallyBlind"
+    (radioEvent)="radioEventIsBlind($event)"
+  ></app-radio>
+  
+</div>

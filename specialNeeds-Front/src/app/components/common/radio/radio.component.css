@@ -1,0 +1,11 @@
+.radio-wrapper{
+    margin: 0 0.5vw 0 0.5vw !important;
+}
+
+.radiobutton-wrapper{
+    margin: 1vw 0 1vw 0;
+}
+
+.radio-label{
+    color: var(--text-light);
+}

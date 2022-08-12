@@ -1,0 +1,20 @@
+.form-wrapper{
+    height: 56vh;
+    width: 29vw;
+    color: var(--text-dark);
+    margin: 1vh 0 1vh 0;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+
+#radio-wrap{
+    margin-bottom: 0;
+}
+
+.select-wrapper{
+    margin-bottom: 4vh;
+}
+
+.directions{
+    margin: 2vh 0 1vh 0;
+}

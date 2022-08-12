@@ -1,0 +1,99 @@
+<div class="d-flex flex-column align-items-center form-wrapper fadeIn">
+  <p class="directions fadeIn text-center">
+    Enter the following information about the beneficiary:
+  </p>
+  <app-input
+    class="inputs"
+    [placeholder]="'0.00'"
+    [type]="'text'"
+    [title]="'First Name'"
+    [title_id]="'fname'"
+    [model]="data.addBeneficiary.firstName"
+    [(ngModel)]="data.addBeneficiary.firstName"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [placeholder]="'0.00'"
+    [type]="'text'"
+    [title]="'Last Name'"
+    [title_id]="'lname'"
+    [model]="data.addBeneficiary.lastName"
+    [(ngModel)]="data.addBeneficiary.lastName"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [placeholder]="'0.00'"
+    [type]="'number'"
+    [title]="'Age'"
+    [title_id]="'age'"
+    [model]="data.addBeneficiary.age"
+    [(ngModel)]="data.addBeneficiary.age"
+    ngDefaultControl
+  ></app-input>
+  <div
+    class="d-flex flex-column justify-content-center text-center inputs"
+    id="radio-wrap"
+  >
+    <span>Does the beneficiary work?</span>
+    <app-radio
+      [name]="'work'"
+      (radioEvent)="radioEventIsWorking($event)"
+    ></app-radio>
+  </div>
+  <app-input
+    class="inputs"
+    *ngIf="isWorking == true"
+    [type]="'number'"
+    [title]="'Yearly Income'"
+    [title_id]="'yearly-income'"
+    [model]="data.addBeneficiary.yearlyIncome"
+    [(ngModel)]="data.addBeneficiary.yearlyIncome"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [type]="'number'"
+    [title]="'Expected Lifespan'"
+    [title_id]="'lifespan'"
+    [model]="data.addBeneficiary.expectedLifeSpan"
+    [(ngModel)]="data.addBeneficiary.expectedLifeSpan"
+    ngDefaultControl
+  ></app-input>
+
+  <div class="d-flex flex-column align-items-center select-wrapper">
+    <label for="states">State of Residence</label>
+    <select
+      class="select"
+      id="states"
+      [value]="data.addBeneficiary.stateOfResidence"
+      [(ngModel)]="data.addBeneficiary.stateOfResidence"
+      ngDefaultControl
+    >
+      <option class="option" *ngFor="let state of states" [value]="state">
+        {{ state }}
+      </option>
+    </select>
+  </div>
+
+  <div class="d-flex flex-column align-items-center select-wrapper">
+    <label for="disability">Category of Disability</label>
+    <select
+      class="select"
+      id="disability"
+      
+      [(ngModel)]="data.conditionStatus.isConditionPermanent"
+    >
+      <option class="option" [ngValue]="true">Forever Disabled</option>
+      <option class="option" [ngValue]="false">Temporarily Disabled</option>
+    </select>
+  </div>
+
+    <span>Is the dependent a student?</span>
+    <app-radio
+      [name]="'student'"
+      (radioEvent)="radioEventIsStudent($event)"
+      ngDefaultControl
+    ></app-radio>
+  </div>

@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center align-items-center progress-wrapper">
+    <div class="d-flex align-items-center">
+        <app-progress-bubble [title]="titles[0]" [id]="1" [page]="page" (pageChangeEvent)="receivePageChange($event)"></app-progress-bubble>
+        <span class="progress-bar"></span>
+        <app-progress-bubble [title]="titles[1]" [id]="2" [page]="page" (pageChangeEvent)="receivePageChange($event)"></app-progress-bubble>
+        <span class="progress-bar"></span>
+        <app-progress-bubble [title]="titles[2]" [id]="3" [page]="page" (pageChangeEvent)="receivePageChange($event)"></app-progress-bubble>
+        <span class="progress-bar"></span>
+        <app-progress-bubble [title]="titles[3]" [id]="4" [page]="page" (pageChangeEvent)="receivePageChange($event)"></app-progress-bubble>
+    </div>
+</div>
+<div class="d-flex flex-column align-items-center form-wrapper">
+    <div class="d-flex align-items-center flex-column bubble rounded shadow-sm display-box">
+        <p class="text-center" id="header">{{titles[page-1]}}</p>
+        <div class="d-flex flex-column align-items-center page-display" [ngSwitch]="page">
+            <app-page-one *ngSwitchCase='1'> </app-page-one>
+            <app-page-two *ngSwitchCase='2'> </app-page-two>
+            <app-page-three *ngSwitchCase='3'> </app-page-three>
+            <app-page-four *ngSwitchCase='4'> </app-page-four>
+        </div>
+    </div>
+    <div>
+        <button class="button shadow" id="back" (click)="prevPage()">BACK</button>
+        <button *ngIf="page < 4; else elseBlock" class="button shadow" id="next" (click)="nextPage()">NEXT</button>
+        <ng-template #elseBlock>        
+            <button class="button shadow" id="next" (click)="submitForm()">SUBMIT</button>
+        </ng-template>
+    </div>
+</div> 

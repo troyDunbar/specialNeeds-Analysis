@@ -1,0 +1,77 @@
+<div class="d-flex flex-column align-items-center form-wrapper">
+  <p class="directions fadeIn text-center">
+    Enter the following information about your monthly expenses:
+  </p>
+  <app-input
+    class="inputs"
+    [title]="'Housing Cost'"
+    [title_id]="'housing-cost'"
+    [type]="'number'"
+    [model]="data.expenses.housing"
+    [(ngModel)]="data.expenses.housing"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Food/Groceries Cost'"
+    [title_id]="'food-cost'"
+    [type]="'number'"
+    [model]="data.expenses.food"
+    [(ngModel)]="data.expenses.food"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Ulitity Cost'"
+    [title_id]="'util-cost'"
+    [type]="'number'"
+    [model]="data.expenses.utilities"
+    [(ngModel)]="data.expenses.utilities"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Transportation Cost'"
+    [title_id]="'transport-cost'"
+    [type]="'number'"
+    [model]="data.expenses.transportation"
+    [(ngModel)]="data.expenses.transportation"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Medical Co-pay Cost'"
+    [title_id]="'medical-cost'"
+    [type]="'number'"
+    [model]="data.expenses.medicalCoPay"
+    [(ngModel)]="data.expenses.medicalCoPay"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Entertainment/travel/shopping Cost'"
+    [title_id]="'entertain-cost'"
+    [type]="'number'"
+    [model]="data.expenses.entertainment"
+    [(ngModel)]="data.expenses.entertainment"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Housing Care/Therapy Cost'"
+    [title_id]="'care-cost'"
+    [type]="'number'"
+    [model]="data.expenses.conditionCare"
+    [(ngModel)]="data.expenses.conditionCare"
+    ngDefaultControl
+  ></app-input>
+  <app-input
+    class="inputs"
+    [title]="'Any Other Cost'"
+    [title_id]="'misc-cost'"
+    [type]="'number'"
+    [model]="data.expenses.other"
+    [(ngModel)]="data.expenses.other"
+    ngDefaultControl
+  ></app-input>
+</div>

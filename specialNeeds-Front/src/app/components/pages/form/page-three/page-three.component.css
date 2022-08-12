@@ -1,0 +1,49 @@
+.form-wrapper{
+    height: 56vh;
+    width: 29vw;
+    color:  var(--text-dark);
+    margin: 1vh 0 1vh 0;
+    font-weight: 300;
+    overflow-y: scroll;
+}
+
+.radiobutton-wrapper{
+    margin: 1vw 0 1vw 0;
+}
+
+.form-header{
+    margin: 2vh 0 1vh 0;
+}
+
+.eligible-prompt{
+    margin: 2vh 0 3vh 0;
+    background-color: #576F7250;
+}
+
+.title{
+    width: 90%;
+    font-size: large;
+    border-bottom: 1px solid var(--text-light);
+    margin: 2vh 0 2vh 0;
+    line-height: 0.1em !important;
+}
+
+.title span{
+    background:  var(--background-light);
+    padding: 0 7px 0 7px;
+}
+
+.info-text{
+    color: var(--text-light);
+}
+/* #row-one{
+    margin: 1vh 0 3vh;
+}
+
+#row-two{
+    margin: 1vh 0 3vh;
+}
+
+#row-three{
+    margin: 1vh 0 3vh;
+} */

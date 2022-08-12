@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    /* global colors */
+    --text-light: white;
+    --text-dark: #7EB4EA;
+    --text-dark50: #7EB4EA50;
+    --background-dark: #454446;
+    --background-light: #535353;
+
+    /* 
+    old colors (for testing purposes)
+    --light-beige: #F0EBE3;
+    --beige: #E4DCCF;
+    --light-teal: #7D9D9C;
+    --teal: #576F72; 
+    */
+}
+
+body{
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+}
+
+.button{
+    height: 4vh;
+    width: 6vw;
+    border-radius: 7px !important;
+    color: #E4DCCF;
+    background-color: transparent;
+}
+
+
+.inputs{
+    margin: 3vh 0 3vh 0;
+}
+
+.select-wrapper{
+    margin: 1vw 0 1vw 0;
+}
+
+.select{
+    width: 17.5vw;
+    color: var(--text-light);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--text-dark);
+    padding: 4px 0 4px 5px;
+} .select .option{
+    background-color: var(--background-dark);
+    border: transparent;
+}
+
+.bubble{
+    animation: fadeInAnimation 1.5s;
+}
+
+.fadeIn{
+    animation: fadeIn 1.5s !important;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--background-dark);  
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c7c0b4;  
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+} 

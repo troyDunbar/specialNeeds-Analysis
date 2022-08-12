@@ -1,0 +1,104 @@
+.base-wrapper{
+    flex-direction: column;
+}
+
+.header-wrapper{
+    height: 8vh;
+    width: 85vw;
+
+    font-size: 36px;
+    padding-top: 12px;
+    color: var(--text-dark);
+}
+
+h2{
+    width: 80vw;
+    text-align: center;
+    border-bottom: 1px solid  var(--text-light);
+    margin-bottom: 2vh;
+    line-height: 0.1em !important;
+}
+
+h2 span{
+    background:  var(--background-light);
+    padding: 0 10px 0 10px;
+}
+
+.info-wrapper{
+    height: 78vh;
+    width: 90vw;
+}
+
+.left-column{
+    flex-direction: column;
+
+    height: 78vh;
+    width: 55vw;
+
+    /* background-color: red; */
+}
+
+.right-column{
+    height: 78vh;
+    width: 35vw;
+
+    /* background-color: black; */
+}
+
+/*  left side of display */
+.pie-chart-box{
+    height: 38vh;
+    width: 54vw;
+    border-radius: 15px;
+    color:  var(--text-light);
+    background-color:  var(--background-dark);
+}
+
+.pie-chart-output{
+    background-color: var(--background-dark);
+
+    height: 36vh;
+    width: 53vw;
+
+    color: var(--text-dark);
+
+    /* background-color: red; */
+}
+
+.line-graph-box{
+    margin-top: 16px;
+
+    height: 38vh;
+    width: 54vw;
+    border-radius: 15px;
+    color:  var(--text-white);
+    background-color: var(--background-dark) ;
+}
+
+.line-graph-output{
+    background-color: var(--background-dark);
+
+    height: 36vh;
+    width: 53vw;
+
+    color:  var(--text-light);
+}
+
+
+/* Right side of display */
+.data-box{
+    height: 78vh;
+    width: 34vw;
+    border-radius: 15px;
+    color: var(--text-light);
+    background-color: var(--background-dark);
+}
+
+.data-output{
+    background-color:  var(--background-dark);
+
+    height: 73vh;
+    width: 33vw;
+
+    color:  var(--text-dark);
+}
